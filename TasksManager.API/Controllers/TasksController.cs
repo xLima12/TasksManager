@@ -37,7 +37,7 @@ public class TasksController : ControllerBase
     [HttpGet]
     [ProducesResponseType(typeof(ResponseAllTasksJson), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status404NotFound)]
-    public IActionResult Get()
+    public IActionResult GetAll()
     {
         var useCase = new GetAllTasksUseCase();
         var response = useCase.Execute();
